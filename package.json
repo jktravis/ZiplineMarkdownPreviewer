@@ -1,0 +1,21 @@
+{
+  "name": "zipline-markdown",
+  "version": "1.0.0",
+  "description": "FCC Markdown Previewer",
+  "main": "index.html",
+  "dependencies": {},
+  "devDependencies": {
+    "browser-sync": "^2.10.1",
+    "browserify": "^12.0.1",
+    "chai": "^3.4.1",
+    "gulp": "^3.9.0",
+    "mocha": "~2.3.4",
+    "vinyl-buffer": "^1.0.0",
+    "vinyl-source-stream": "^1.1.0"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "author": "jktravis <joshua.travis@gmail.com>",
+  "license": "ISC"
+}
