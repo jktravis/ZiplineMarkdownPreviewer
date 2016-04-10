@@ -1,6 +1,6 @@
 // webpack.config.js
 module.exports = {
-  entry: './static/js/main.js',
+  entry: './src/js/main.js',
   output: {
     path: './build/js',
     filename: 'bundle.js'
@@ -10,6 +10,10 @@ module.exports = {
       {
         test: /\.scss$/,
         loaders: ["style", "css", "sass"]
+      },
+      {
+        test:/\.css/,
+        loaders: ["style", "css"]
       },
       { 
         test: /\.jpe?g$|\.gif$|\.png$|\.svg$|\.woff$|\.ttf$/, 
