@@ -3,6 +3,10 @@
 var React = require('react');
 
 var EntryPane = React.createClass({
+  propTypes: {
+    onChange: React.PropTypes.func.isRequired
+  },
+
   getInitialState: function getInitialState() {
     return {
       input: 'Please entry your Markdown.'
@@ -11,7 +15,9 @@ var EntryPane = React.createClass({
   render: function render() {
     return (
       <div className="entryPane">
-        <textarea className="form-control" placeholder={this.state.input}></textarea>
+        <textarea className="form-control"
+                  placeholder={this.state.input}
+                  onChange={this.props.onChange}></textarea>
       </div>
     );
   }

@@ -2,13 +2,16 @@
 var React = require('react');
 var EntryPane = require('./entry/entryPane');
 var PreviewPane = require('./preview/previewPane');
-var marked = require('marked');
 
 var App = React.createClass({
   getInitialState: function () {
     return {
       markdown: '**This** has `been` *markeddown*'
     };
+  },
+
+  setMarkdownState: function (event) {
+    return this.setState({markdown: event.target.value});
   },
 
   render: function render() {
@@ -20,7 +23,7 @@ var App = React.createClass({
           </div>
           <div className="row">
             <div className="col-lg-5 col-lg-offset-1">
-              <EntryPane />
+              <EntryPane onChange={this.setMarkdownState}/>
             </div>
             <div className="col-lg-5">
               <PreviewPane markdown={this.state.markdown}/>
