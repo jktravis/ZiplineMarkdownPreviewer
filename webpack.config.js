@@ -19,7 +19,7 @@ module.exports = {
     new webpack.ProvidePlugin({
       $: 'jquery',
       jQuery: 'jquery',
-      "window.jQuery": 'jquery'
+      'window.jQuery': 'jquery'
     })
   ],
 
@@ -27,25 +27,25 @@ module.exports = {
     preLoaders: [
       {
         test: /\.js$/,
-        exclude: /node_modules/,
+        exclude: /(node_modules|vendor)/,
         loader: 'eslint'
       }
-    ], 
+    ],
     loaders: [
       {
         test: /\.scss$/,
         exclude: /node_modules/,
-        loaders: ["style", "css", "sass"]
+        loaders: ['style', 'css', 'sass']
       },
       {
         test:/\.css/,
         exclude: /node_modules/,
-        loaders: ["style", "css"]
+        loaders: ['style', 'css']
       },
-      { 
+      {
         test: /\.jpe?g$|\.gif$|\.png$|\.svg$|\.woff$|\.ttf$/,
         exclude: /node_modules/,
-        loader: "file"
+        loader: 'file'
       },
       {
         test: /\.js$/,
@@ -54,6 +54,22 @@ module.exports = {
         query: {
           presets: ['es2015', 'react']
         }
+      },
+      {
+        test: /\.(woff|woff2)(\?v=\d+\.\d+\.\d+)?$/,
+        loader: 'url?limit=10000&mimetype=application/font-woff'
+      },
+      {
+        test: /\.ttf(\?v=\d+\.\d+\.\d+)?$/,
+        loader: 'url?limit=10000&mimetype=application/octet-stream'
+      },
+      {
+        test: /\.eot(\?v=\d+\.\d+\.\d+)?$/,
+        loader: 'file'
+      },
+      {
+        test: /\.svg(\?v=\d+\.\d+\.\d+)?$/,
+        loader: 'url?limit=10000&mimetype=image/svg+xml'
       }
     ]
   }

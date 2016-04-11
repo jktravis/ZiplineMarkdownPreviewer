@@ -1,5 +1,6 @@
-$ = jQuery = require('jquery');
-require('bootstrap');
+require('../../vendor/bootstrap/css/bootstrap.css');
+require('../../vendor/bootstrap/css/bootstrap-theme.css');
+require('../../vendor/bootstrap/js/bootstrap');
 require('../css/main.scss');
 
 var marked = require('marked');
