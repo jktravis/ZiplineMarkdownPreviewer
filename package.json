@@ -30,7 +30,8 @@
   },
   "scripts": {
     "test": "mocha",
-    "dev": "webpack-dev-server"
+    "dev": "webpack-dev-server",
+    "lint": "eslint src/"
   },
   "author": "jktravis <joshua.travis@gmail.com>",
   "license": "ISC"
