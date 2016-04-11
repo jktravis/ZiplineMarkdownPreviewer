@@ -12,3 +12,5 @@ ReactDOM.render(
   document.getElementById('example')
 );
 console.log('hello, real world');
+
+$('.jumbotron').html('For reelz, Herro!');
