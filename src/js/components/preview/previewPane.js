@@ -4,11 +4,10 @@ var React = require('react');
 var marked = require('marked');
 
 var PreviewPane = React.createClass({
-  getInitialState: function getInitialState() {
-    return {
-      markdown: ('**This** has `been` *markeddown*')
-    };
+  propTypes: {
+    markdown: React.PropTypes.object.isRequired
   },
+
   rawMarkup: function rawMarkup(text) {
     var raw = marked(text.toString(), {sanitize: true});
     return {__html: raw};
@@ -17,7 +16,7 @@ var PreviewPane = React.createClass({
   render: function () {
     return (
       <div className="previewPane form-control"
-           dangerouslySetInnerHTML={this.rawMarkup(this.state.markdown)}>
+           dangerouslySetInnerHTML={this.rawMarkup(this.props.markdown)}>
       </div>
     );
   }

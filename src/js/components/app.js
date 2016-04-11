@@ -1,8 +1,16 @@
+"use strict";
 var React = require('react');
 var EntryPane = require('./entry/entryPane');
 var PreviewPane = require('./preview/previewPane');
+var marked = require('marked');
 
 var App = React.createClass({
+  getInitialState: function () {
+    return {
+      markdown: '**This** has `been` *markeddown*'
+    };
+  },
+
   render: function render() {
     return (
       <div>
@@ -15,7 +23,7 @@ var App = React.createClass({
               <EntryPane />
             </div>
             <div className="col-lg-5">
-              <PreviewPane />
+              <PreviewPane markdown={this.state.markdown}/>
             </div>
           </div>
         </div>
