@@ -14,7 +14,7 @@ var App = React.createClass({
             <div className="col-lg-5 col-lg-offset-1">
               <EntryPane />
             </div>
-            <div className="col-lg-5 col-lg-offset-1">
+            <div className="col-lg-5">
               <PreviewPane />
             </div>
           </div>

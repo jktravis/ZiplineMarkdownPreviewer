@@ -10,8 +10,8 @@ var EntryPane = React.createClass({
   },
   render: function render() {
     return (
-      <div>
-        <textarea>{this.state.input}</textarea>
+      <div className="entryPane">
+        <textarea className="form-control">{this.state.input}</textarea>
       </div>
     );
   }

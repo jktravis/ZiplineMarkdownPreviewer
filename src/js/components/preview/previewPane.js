@@ -11,12 +11,13 @@ var PreviewPane = React.createClass({
   },
   rawMarkup: function rawMarkup(text) {
     var raw = marked(text.toString(), {sanitize: true});
-    return { __html: raw};
+    return {__html: raw};
   },
 
   render: function () {
     return (
-      <div dangerouslySetInnerHTML={this.rawMarkup(this.state.markdown)}>
+      <div className="previewPane form-control"
+           dangerouslySetInnerHTML={this.rawMarkup(this.state.markdown)}>
       </div>
     );
   }
