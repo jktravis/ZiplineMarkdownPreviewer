@@ -1,4 +1,25 @@
-$bgColor: #cccc99;
-html {
-    background-color: $bgColor;
+header > h1 {
+  text-align: center;
+}
+
+.entryPane {
+  textarea {
+    width: 90%;
+    font-family: Consolas, Menlo, Monaco, monospace;
+  }
+}
+
+.previewPane {
+  width: 100%;
+  overflow: scroll;
+}
+
+.entryPane textarea, .previewPane {
+  padding: 1em;
+  height: 600px;
+  border: /**/{
+    color: #0f0f0f;
+    width: 1px;
+    style: solid;
+  }
 }
