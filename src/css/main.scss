@@ -1,4 +1,4 @@
-h1 {
+header > h1 {
   text-align: center;
 }
 
@@ -11,12 +11,13 @@ h1 {
 
 .previewPane {
   width: 100%;
+  overflow: scroll;
 }
 
 .entryPane textarea, .previewPane {
   padding: 1em;
-  height: 100%;
-  border: {
+  height: 600px;
+  border: /**/{
     color: #0f0f0f;
     width: 1px;
     style: solid;
