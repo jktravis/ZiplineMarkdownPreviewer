@@ -9,7 +9,7 @@ var EntryPane = React.createClass({
 
   getInitialState: function getInitialState() {
     return {
-      input: 'Please entry your Markdown.'
+      input: 'Please enter your Markdown.'
     };
   },
   render: function render() {
